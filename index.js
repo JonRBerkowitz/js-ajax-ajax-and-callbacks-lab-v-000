@@ -19,5 +19,6 @@ function renderSearchResults(data) {
     </div>
     <hr>`
   });
+  console.log(result);
   return result;
 }
