@@ -12,7 +12,7 @@ function searchRepositories() {
 function renderSearchResults(data) {
   let result = []
   result = data.items.map(r => {
-    result.html_url}
+    result.html_url
   });
   console.log(result);
   return result;
