@@ -10,7 +10,7 @@ function searchRepositories() {
 }
 
 function renderSearchResults(data) {
-  data.items.map(r => {
+  return data.items.map(r => {
     `<li>${r.name}</li>`
   });
 }
