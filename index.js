@@ -1,14 +1,14 @@
-$(document).ready(function (){
-});
 
-function searchRepositories() {
-  let searchTerms = $('#searchTerms').val();
-  $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function(data) {
-    console.log(data.items[0]);
-    let r = `${data.items[0]}`;
-    document.getElementById('results').innerHTML = r;
-  });
+
+var searchRepositories = () => {
+  const searchTerms = $('#searchTerms').val()
+  $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, data => {
+      $('#results').html(renderSearchResults(data))
+    }).fail(error => {
+      displayError()
+    })
 }
+
 
 var renderSearchResult = (result) => {
   return `
@@ -22,3 +22,6 @@ var renderSearchResult = (result) => {
 }
 
 var renderSearchResults = (data) => data.items.map( result => renderSearchResult(result))
+
+$(document).ready(function (){
+});
