@@ -3,7 +3,6 @@ function searchRepositories() {
   $.get(`https://api.github.com/search/repositories?q=user:${searchTerms}`, function(data) {
     $('#results').html(data);
   });
-  console.log(JSON.parse(data));
 }
 
 function showRepositories(result) {
