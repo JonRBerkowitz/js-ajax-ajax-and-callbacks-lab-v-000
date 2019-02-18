@@ -1,8 +1,8 @@
 function searchRepositories() {
   let searchTerms = $('#searchTerms').val();
   $.get(`https://api.github.com/search/repositories?q=user:${searchTerms}`, function(data) {
-    $('#results').html(showRepositories(data));
     console.log(data[0]);
+    $('#results').html(showRepositories(data));
   });
 }
 
