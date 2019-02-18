@@ -7,7 +7,7 @@ function searchRepositories() {
 }
 
 function showRepositories(results) {
-  console.log(results);
+  console.log(results[0].name);
   results.item.map(
     `<div>
       <h2><a href="${result.html_url}">${result.name}</a></h2>
