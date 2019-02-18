@@ -20,7 +20,3 @@ function renderSearchResults(data) {
   });
   return result;
 }
-
-function renderSearchResults(data) {
-  data.items.map( result => renderSearchResult(result))
-}
