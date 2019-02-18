@@ -1,5 +1,4 @@
-$(document).ready(function (){
-});
+
 
 function searchRepositories() {
   let searchTerms = $('#searchTerms').val();
@@ -19,3 +18,6 @@ function showRepositories(result) {
     <hr>
   `
 }
+
+$(document).ready(function (){
+});
