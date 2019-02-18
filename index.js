@@ -1,11 +1,13 @@
 $(document).ready(function (){
 });
 
-function searchRepositories() {
-  let searchTerms = $('#searchTerms').val();
-  $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function(data) {
-    $('#results').html(renderSearchResults(data));
-  });
+var searchRepositories = () => {
+  const searchTerms = $('#searchTerms').val()
+  $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, data => {
+      $('#results').html(renderSearchResults(data))
+    }).fail(error => {
+      displayError()
+    })
 }
 
 var renderSearchResult = (result) => {
