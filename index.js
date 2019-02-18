@@ -4,7 +4,7 @@ $(document).ready(function (){
 function searchRepositories() {
   let searchTerms = $('#searchTerms').val();
   $.get(`https://api.github.com/search/repositories?q=user:${searchTerms}`, function(data) {
-    $('#results').html(data);
+    $('#results').html(<p>data<p>);
   });
 }
 
