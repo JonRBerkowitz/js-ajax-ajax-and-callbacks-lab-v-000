@@ -23,4 +23,4 @@ function renderSearchResults(data) {
 
 function renderSearchResults(data) {
   data.items.map( result => renderSearchResult(result))
-} 
+}
