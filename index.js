@@ -2,10 +2,11 @@ $(document).ready(function (){
 });
 
 function searchRepositories() {
-  let name = $('#searchTerms').val();
-  req.addEventListener('load', showRepositories);
-  req = $.get('https://api.github.com/search/repositories?q=user:' + name);
-  console.log(JSON.parse(result));
+  let searchTerms = $('#searchTerms').val();
+  $.get(`https://api.github.com/search/repositories?q=user:${searchTerms}`, data() {
+    $('#results').html(data);
+  });
+  console.log(JSON.parse(data));
 }
 
 function showRepositories(result) {
