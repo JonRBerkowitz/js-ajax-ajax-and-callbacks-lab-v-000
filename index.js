@@ -14,7 +14,3 @@ function renderSearchResults(data) {
     `<li>${r.name}</li>`
   });
 }
-
-function renderSearchResults(data) {
-  data.items.map( result => renderSearchResult(result))
-}
