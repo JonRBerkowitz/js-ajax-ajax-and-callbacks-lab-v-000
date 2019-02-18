@@ -11,8 +11,9 @@ function searchRepositories() {
 
 function renderSearchResults(data) {
   let result = []
+  let i = 0;
   result = data.items.map(r => {
-    result.html_url
+    i++;
   });
   console.log(result);
   return result;
