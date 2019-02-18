@@ -11,6 +11,6 @@ function searchRepositories() {
 
 function renderSearchResults(data) {
   let result = "a"
-
+  console.log(result);
   return result;
 }
