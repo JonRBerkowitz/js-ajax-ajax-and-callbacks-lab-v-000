@@ -2,12 +2,11 @@ function searchRepositories() {
   let searchTerms = $('#searchTerms').val();
   $.get(`https://api.github.com/search/repositories?q=user:${searchTerms}`, function(data) {
     $('#results').html(showRepositories(data));
-    console.log(data);
+    console.log(data[0]);
   });
 }
 
 function showRepositories(results) {
-  console.log(results[0].name);
   results.item.map(
     `<div>
       <h2><a href="${result.html_url}">${result.name}</a></h2>
