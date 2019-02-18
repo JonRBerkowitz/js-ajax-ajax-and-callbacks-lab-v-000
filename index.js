@@ -10,7 +10,12 @@ function searchRepositories() {
 }
 
 function renderSearchResults(data) {
-  let result = "a"
+  let result = ["a"]
+  let i = 0;
+  result = data.items.map(function() {
+    i++;
+  });
+  console.log(result);
   console.log(result);
   return result;
 }
