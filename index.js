@@ -11,7 +11,11 @@ function searchRepositories() {
 function renderSearchResults(data) {
   let results = data.items.map(r => {
     console.log(`${r.name}`);
-    return `<div>${r.name}</div>`
+    return `
+    <div>
+    ${r.name}
+    </div>
+    `
   });
   console.log(results);
 }
