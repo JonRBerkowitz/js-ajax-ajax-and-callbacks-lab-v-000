@@ -9,7 +9,7 @@ function searchRepositories() {
 }
 
 function renderSearchResults(data) {
-  let results = data.items.map(r => {
+  let results = data.items.map(result => {
     return
     `<div>
       <h2><a href="${result.html_url}">${result.name}</a></h2>
