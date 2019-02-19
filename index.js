@@ -9,9 +9,9 @@ function searchRepositories() {
 }
 
 function renderSearchResults(data) {
-  let results = data.items.map(result => {
-    return
-    `${result.name}`
+  let results = data.items.map(r => {
+    console.log(`${r.name}`);
+    return `${r.name}`
   });
   console.log(results);
 }
