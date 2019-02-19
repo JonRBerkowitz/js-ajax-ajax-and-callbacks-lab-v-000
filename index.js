@@ -5,7 +5,9 @@ function searchRepositories() {
   let searchTerms = $('#searchTerms').val();
   $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function(data) {
     $('#results').html(renderSearchResults(data));
-  });
+  }).fail(error => {
+      displayError()
+    });
 }
 
 function renderSearchResults(data) {
