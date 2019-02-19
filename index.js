@@ -12,5 +12,6 @@ function searchRepositories() {
 function renderSearchResults(data) {
   return data.items.map(r => {
     `<li>a:${r.name}</li>`
+    console.log(r);
   });
 }
