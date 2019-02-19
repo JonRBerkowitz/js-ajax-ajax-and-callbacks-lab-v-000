@@ -18,5 +18,6 @@ function renderSearchResults(data) {
     </div>
     <hr>`
   });
+  return results;
   console.log(results);
 }
