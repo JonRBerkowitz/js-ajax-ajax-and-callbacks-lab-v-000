@@ -11,6 +11,7 @@ function searchRepositories() {
 function renderSearchResults(data) {
   console.log(data.items);
   let results = data.items.map(r => {
+    console.log(r);
     r.name
   });
   console.log(results);
