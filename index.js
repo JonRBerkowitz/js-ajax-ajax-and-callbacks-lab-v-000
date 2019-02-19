@@ -9,8 +9,8 @@ function searchRepositories() {
 }
 
 function renderSearchResults(data) {
-  console.log(data.items);
-  data.items.map(r => {
+  data.map(r => {
+    console.log(r.name);
     `<li>a:${r.name}</li>`
   });
 }
